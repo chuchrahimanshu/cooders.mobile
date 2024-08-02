@@ -6,6 +6,7 @@ import InputContainer from "../../components/form/InputContainer";
 import { AuthenticateStateInterface } from "../../types/global";
 import Button from "../../components/form/Button";
 import AuthenticateInputs from "../../components/authentication/AuthenticateInputs";
+import SocialAuth from "../../components/authentication/SocialAuth";
 
 const Authenticate: React.FC = () => {
   const initialState: AuthenticateStateInterface = {
@@ -41,6 +42,7 @@ const Authenticate: React.FC = () => {
           onPress={onPressHandler}
           title="Let's Go"
         />
+        <SocialAuth />
       </FormContainer>
     </SafeAreaView>
   );
