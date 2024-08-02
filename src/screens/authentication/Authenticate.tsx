@@ -5,6 +5,7 @@ import FormContainer from "../../components/form/FormContainer";
 import InputContainer from "../../components/form/InputContainer";
 import { AuthenticateStateInterface } from "../../types/global";
 import Button from "../../components/form/Button";
+import AuthenticateInputs from "../../components/authentication/AuthenticateInputs";
 
 const Authenticate: React.FC = () => {
   const initialState: AuthenticateStateInterface = {
@@ -31,15 +32,9 @@ const Authenticate: React.FC = () => {
   return (
     <SafeAreaView style={styles.display}>
       <FormContainer>
-        <InputContainer
-          editable={true}
-          keyName="email"
-          placeholder="johndoe@gmail.com"
-          required={true}
-          title="Email Address"
-          value={formData.email}
+        <AuthenticateInputs
+          formData={formData}
           onChangeText={onChangeTextHandler}
-          autoCapitalize="none"
         />
         <Button
           disabled={submitDisabled}

@@ -36,3 +36,8 @@ interface ButtonPropsInterface {
   disabled: boolean;
   onPress: function;
 }
+
+interface AuthenticateInputsPropsInterface {
+  formData: AuthenticateStateInterface;
+  onChangeText: function;
+}
