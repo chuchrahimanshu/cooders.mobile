@@ -2,7 +2,7 @@ import React from "react";
 import { View } from "react-native";
 
 const Authenticate: React.FC = () => {
-  return <View />;
+  return <View></View>;
 };
 
 export default Authenticate;
