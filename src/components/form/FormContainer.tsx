@@ -1,10 +1,13 @@
 import React, { ReactNode } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-const FormContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
+const FormContainer: React.FC<{ children: ReactNode; title: string }> = ({
+  children,
+  title,
+}) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Ignite! 🔥</Text>
+      <Text style={styles.title}>{title}</Text>
       {children}
     </View>
   );

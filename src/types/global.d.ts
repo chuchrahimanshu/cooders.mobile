@@ -25,6 +25,7 @@ interface InputContainerPropsInterface {
   title: string;
   required: boolean;
   autoCapitalize: "none" | "sentences" | "words" | "characters" | undefined;
+  divider: boolean;
 }
 
 interface AuthenticateStateInterface {
@@ -39,5 +40,19 @@ interface ButtonPropsInterface {
 
 interface AuthenticateInputsPropsInterface {
   formData: AuthenticateStateInterface;
+  onChangeText: function;
+}
+
+interface SignUpStateInterface {
+  firstName: string;
+  lastName: string;
+  email: string;
+  username: string;
+  password: string;
+  confirmPassword: string;
+}
+
+interface SignUpInputsPropsInterface {
+  formData: SignUpStateInterface;
   onChangeText: function;
 }

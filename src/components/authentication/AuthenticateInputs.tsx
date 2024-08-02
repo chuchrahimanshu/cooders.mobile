@@ -16,6 +16,7 @@ const AuthenticateInputs: React.FC<AuthenticateInputsPropsInterface> = ({
       value={formData.email}
       onChangeText={onChangeText}
       autoCapitalize="none"
+      divider={false}
     />
   );
 };

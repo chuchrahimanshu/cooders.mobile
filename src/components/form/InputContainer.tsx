@@ -13,9 +13,10 @@ const InputContainer: React.FC<InputContainerPropsInterface> = ({
   title,
   value,
   autoCapitalize,
+  divider,
 }) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, divider && { width: "48%" }]}>
       <Label title={title} required={required} />
       <Input
         editable={editable}
@@ -32,6 +33,7 @@ const InputContainer: React.FC<InputContainerPropsInterface> = ({
 const styles = StyleSheet.create({
   container: {
     rowGap: 8,
+    marginBottom: 12,
   },
 });
 
