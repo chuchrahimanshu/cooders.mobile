@@ -11,11 +11,14 @@ const Stack = createNativeStackNavigator();
 
 const AuthNavigation: React.FC = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
       <Stack.Screen name="authenticate" component={Authenticate} />
       <Stack.Screen name="signup" component={SignUp} />
       <Stack.Screen name="signin" component={SignIn} />
-      <Stack.Screen name="changepasswor`d" component={ChangePassword} />
+      <Stack.Screen name="changepassword" component={ChangePassword} />
       <Stack.Screen name="forgetpassword" component={ForgetPassword} />
       <Stack.Screen name="emailverification" component={EmailVerification} />
       <Stack.Screen
