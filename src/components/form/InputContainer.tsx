@@ -6,22 +6,24 @@ import { StyleSheet, View } from "react-native";
 
 const InputContainer: React.FC<InputContainerPropsInterface> = ({
   editable,
-  key,
+  keyName,
   onChangeText,
   placeholder,
   required,
   title,
   value,
+  autoCapitalize,
 }) => {
   return (
     <View style={styles.container}>
       <Label title={title} required={required} />
       <Input
         editable={editable}
-        key={key}
+        keyName={keyName}
         onChangeText={onChangeText}
         placeholder={placeholder}
         value={value}
+        autoCapitalize={autoCapitalize}
       />
     </View>
   );

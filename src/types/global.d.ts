@@ -12,7 +12,8 @@ interface InputPropsInterface {
   value: string;
   onChangeText: function;
   editable: boolean;
-  key: string;
+  keyName: string;
+  autoCapitalize: "none" | "sentences" | "words" | "characters" | undefined;
 }
 
 interface InputContainerPropsInterface {
@@ -20,11 +21,18 @@ interface InputContainerPropsInterface {
   value: string;
   onChangeText: function;
   editable: boolean;
-  key: string;
+  keyName: string;
   title: string;
   required: boolean;
+  autoCapitalize: "none" | "sentences" | "words" | "characters" | undefined;
 }
 
 interface AuthenticateStateInterface {
   email: string;
+}
+
+interface ButtonPropsInterface {
+  title: string;
+  disabled: boolean;
+  onPress: function;
 }

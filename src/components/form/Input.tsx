@@ -7,7 +7,8 @@ const Input: React.FC<InputPropsInterface> = ({
   value,
   onChangeText,
   editable,
-  key,
+  keyName,
+  autoCapitalize,
 }) => {
   const [inputFocus, setInputFocus] = useState(false);
 
@@ -29,7 +30,8 @@ const Input: React.FC<InputPropsInterface> = ({
       onBlur={onBlurHandler}
       editable={editable}
       value={value}
-      onChangeText={onChangeText?.bind(this, key)}
+      onChangeText={onChangeText?.bind(this, keyName)}
+      autoCapitalize={autoCapitalize}
     />
   );
 };
@@ -40,7 +42,8 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: "#1f1f1f",
     borderRadius: 14,
-    paddingVertical: 8,
+    paddingTop: 7,
+    paddingBottom: 10,
     paddingHorizontal: 16,
     color: "#ffffff",
     fontSize: 18,
